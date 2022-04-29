@@ -5,7 +5,17 @@ import {px} from '../shared/px';
 
 export const Chart3 = () => {
   const divRef = useRef(null);
-  useEffect(() => {
+  const data=[0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09]
+  useEffect(()=>{
+      setInterval(()=>{
+            const newData = [
+                Math.random(), Math.random(), Math.random(), Math.random(),Math.random(), Math.random(), Math.random(), Math.random(), 
+            ];
+            x(newData);
+      },2000)
+  })
+
+  const x =(data) => {
     var myChart = echarts.init(divRef.current);
     myChart.setOption(createEchartsOptions({
       legend: {
@@ -42,7 +52,7 @@ export const Chart3 = () => {
         {
           name: '抢劫',
           type: 'line',
-          data: [0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09].reverse()
+          data: data.reverse()
         },
         {
           name: '醉驾',
@@ -52,18 +62,18 @@ export const Chart3 = () => {
         {
           name: '盗窃',
           type: 'line',
-          data: [0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11].reverse()
+          data: [1, 0.8, 0.6, 0.9, 0.2, 0.4, 0.6, 0.9, 1].reverse()
         },
-        {
-          name: '故意杀人',
-          type: 'line',
-          data: [0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12].reverse()
-        },
-        {
-          name: '故意伤人',
-          type: 'line',
-          data: [0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13].reverse()
-        }
+        // {
+        //   name: '故意杀人',
+        //   type: 'line',
+        //   data: [0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12].reverse()
+        // },
+        // {
+        //   name: '故意伤人',
+        //   type: 'line',
+        //   data: [0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13].reverse()
+        // }
       ].map(obj => ({
         ...obj,
         symbol: 'circle',
@@ -71,7 +81,7 @@ export const Chart3 = () => {
         lineStyle: {width: px(2)}
       }))
     }));
-  }, []);
+  };
 
   return (
     <div className="bordered 发案趋势">

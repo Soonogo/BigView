@@ -6,13 +6,12 @@ import {createEchartsOptions} from '../shared/create-echarts-options';
 
 export const Chart1 = () => {
   const divRef = useRef(null);
-  useEffect(() => {
+  const data =[10, 20, 36, 41, 15, 26, 37, 18, 29]
+  const x =(data)=>{
     var myChart = echarts.init(divRef.current);
-    myChart.setOption(
-      createEchartsOptions({
-
+    myChart.setOption(createEchartsOptions({
       xAxis: {
-        data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
+        data: ['开发新区', '开发新区', '开发新区', '开发新区', '开发新区', '开发新区', '开发新区', '开发新区', '开发新区'],
         axisTick: {show: false},
         axisLine: {
           lineStyle: {color: '#083B70'}
@@ -48,11 +47,21 @@ export const Chart1 = () => {
       },
       series: [{
         type: 'bar',
-        data: [10, 20, 36, 41, 15, 26, 37, 18, 29]
+        data: data,
       }]
-    }));
+    }));}
+  useEffect(() => {
+    x(data)
   }, []);
 
+  useEffect(()=>{
+    setInterval(()=>{
+      const newData = data.map(item=>{
+        return item+Math.floor(Math.random()*50)
+      })
+      x(newData)
+    },1000)
+  },[])
   return (
     <div className="bordered 管辖统计">
       <h2>案发派出所管辖统计</h2>
