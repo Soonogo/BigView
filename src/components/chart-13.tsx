@@ -15,7 +15,23 @@ export const Chart13 = () => {
     {value: 0.08, name: '酒泉路'},
     {value: 0.08, name: '天水路'},
   ];
-  useEffect(() => {
+  useEffect(()=>{
+    setInterval(()=>{
+          const newData = [
+              {value: Math.random(), name: '东岗路'},
+              {value: 0.06, name: '段家滩'},
+              {value: 0.11, name: '雁北'},
+              {value: Math.random(), name: '五泉山'},
+              {value: 0.12, name: '中山路'},
+              {value: 0.06, name: '庆阳路'},
+              {value: Math.random(), name: '武都路'},
+              {value: 0.08, name: '酒泉路'},
+              {value: Math.random(), name: '天水路'},
+          ];
+          x(newData);
+    },1000)
+}, []);
+  const x =(data) => {
     var myChart = echarts.init(divRef.current);
     myChart.setOption(createEchartsOptions({
       xAxis: {
@@ -61,8 +77,10 @@ export const Chart13 = () => {
         }]),
       }]
     }));
-  }, []);
-
+  };
+  useEffect(()=>{
+      x(data)
+  })
   return (
     <div ref={divRef} className="chart">
 
