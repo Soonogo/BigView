@@ -14,54 +14,54 @@ export const Chart14 = () => {
       <tr>
         <td rowSpan={4}>入室盗窃</td>
         <td>翻窗入室</td>
-        <td>10</td>
-        <td rowSpan={4}>80</td>
+        <td>99</td>
+        <td rowSpan={4}>99</td>
       </tr>
       <tr>
         <td>撬门入室</td>
-        <td>20</td>
+        <td>99</td>
       </tr>
       <tr>
         <td>技术开锁</td>
-        <td>20</td>
+        <td>99</td>
       </tr>
       <tr>
         <td>撬防护栏</td>
-        <td>30</td>
+        <td>99</td>
       </tr>
       <tr>
         <td rowSpan={2}>抢夺</td>
         <td>摩托车飞车抢夺</td>
-        <td>22</td>
-        <td rowSpan={2}>44</td>
+        <td>99</td>
+        <td rowSpan={2}>99</td>
       </tr>
       <tr>
         <td>徒手抢夺</td>
-        <td>22</td>
+        <td>99</td>
       </tr>
       <tr>
         <td rowSpan={3}>扒窃</td>
         <td>公交车扒窃</td>
-        <td>40</td>
-        <td rowSpan={3}>68</td>
+        <td>99</td>
+        <td rowSpan={3}>99</td>
       </tr>
       <tr>
         <td>车站扒窃</td>
-        <td>22</td>
+        <td>99</td>
       </tr>
       <tr>
         <td>街面扒窃</td>
-        <td>45</td>
+        <td>99</td>
       </tr>
       <tr>
         <td rowSpan={2}>诈骗</td>
         <td>甩票子诈骗</td>
-        <td>32</td>
-        <td rowSpan={2}>102</td>
+        <td>99</td>
+        <td rowSpan={2}>99</td>
       </tr>
       <tr>
         <td>买手机诈骗</td>
-        <td>80</td>
+        <td>99</td>
       </tr>
       </tbody>
     </table>

@@ -1,7 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import './home.scss';
-import headerBg from '../images/header.png';
-import * as echarts from 'echarts';
+import headerBg from '../images/2.jpg';
 import { Chart1 } from '../components/chart-1';
 import { Chart2 } from '../components/chart-2';
 import { Chart3 } from '../components/chart-3';
@@ -23,7 +22,9 @@ export const Home = () => {
   
   return (
     <div className="home">
-      <header style={{backgroundImage: `url(${headerBg})`}}/>
+      <header style={{backgroundImage: `url(${headerBg})`}}>
+        <div className="header-content">公安局-全国犯罪率</div>
+      </header>
       <main>
         <section className="section1">
          <Chart1/>
